@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+	  
+<head py:match="head">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="verify-v1" content="R/7+zOFfyk/TLZi3WKs8a22lie6j20u+ftpXZzbNRwg="/>
+
+	<title>monimi.net - website monitoring, free sms alerts</title>
+	<script type="text/javascript" src="/static/js/clicky.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/js/dojo/dojo/resources/dojo.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/js/dojo/dijit/themes/tundra/tundra.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/monimi.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+</head>
+
+<py:match path="body" once="true">
+  <body py:attrs="select('@*')">
+    ${select("*|text()")}
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-5706209-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+  </body>
+</py:match>
+
+<div py:match="//div[@class='menu-contents']">
+	<ul>
+		<li class="active"><a href="#" title="">Welcome</a></li>
+		<li><a href="/plans" title="">Plans</a></li>
+		<li><a href="/contact" title="">Contact</a></li>
+		<li><a href="https://${server_name}/register" title="">Register</a></li>
+	</ul>
+</div>
+
+<div py:match="//div[@class='body-contents']">
+	<div id="sidebar">
+		<div id="login" class="boxed" style="min-height: 150px;">
+			<div class="title">
+				<h2>Client Account</h2>
+			</div>
+			<div class="content" py:choose="logged_in">
+				<div py:when="True">
+					You are logged in. 
+					Go to your <a href="/home">account&nbsp;page</a> or <a href="/signout">log&nbsp;out</a>. 
+				</div>
+				<div py:otherwise="">
+					<form id="signin" method="post" action="https://${server_name}/signin">
+						<div style="margin-top: -15px;">Email: <input id="email" type="text" name="email" value="" /></div>
+						<div style="margin-top: -10px;">Password: <input id="password" type="password" name="password" value="" /></div>
+						<div><input id="inputsubmit1" type="submit" name="inputsubmit1" style="width: 55px; height: 30px;" value="Login"/>&nbsp;&nbsp;&nbsp;<a href="/forgot_password">Forgot password?</a></div>
+						<p style="margin-top: 0px;">demo@monimi.net/demo for a demonstration</p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end #login -->
+		<div class="boxed">
+			<div class="title">
+				<div style="background: transparent url(/static/images/theme/img11.gif) no-repeat bottom right"><h2>News</h2></div>
+			</div>
+			<div style="height: 180px; width: 200px; padding: 10px;">
+				<div style="margin-bottom: 5px;"><a href="http://blog.monimi.net/index.php?q=node/4">New check added: ping</a></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- end #sidebar -->
+	<div id="main">
+		<div id="welcome" class="post">
+			<h2 class="title"><span>monimi.net: website monitoring service</span></h2>
+			<div class="story">
+				<div>Make sure your website is up and running, be the first to know if it's down.</div>
+				<div style="padding-top: 6px"><a href="https://${server_name}/register">Sign up</a> for a FREE account to get e-mail and SMS alerts.</div>
+				<img style="padding-top: 12px" src="/static/images/screenshots/home.png" alt="User account screenshot"/>
+			</div>
+            <div style="width: 130px; margin-left: auto; margin-right: auto; padding-top: 1em;"> 
+            <!-- AddThis Button BEGIN -->
+            <script type="text/javascript">var addthis_pub = "ak1394";</script>
+            <a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" border="0" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+            <!-- AddThis Button END -->
+            </div>
+		</div>
+		<!-- end #welcome -->
+	</div>
+	<!-- end #main -->
+	
+	<div style="clear: both;">&nbsp;</div>
+</div>
+
+<xi:include href="_master.html"/>
+</html>

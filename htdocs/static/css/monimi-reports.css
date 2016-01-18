@@ -1,0 +1,124 @@
+.Reports {
+    overflow-x: auto;
+}
+
+.Reports .left {
+	float:left;
+	width:190px;
+	height: 400px;
+}
+
+.Reports .right {
+	float:left;
+    width: 650px;
+    height: 450px;
+}
+
+.Reports .ReportList {
+	width: 190px;
+	height: 350px;
+	direction:rtl;
+	margin-top:40px;
+	overflow-x:visible;
+	overflow-y:auto;
+}
+
+.Reports .ReportList table {
+	border-collapse:collapse;
+	direction:ltr;
+	width:170px;
+}
+
+.Reports .ReportList table td {
+	height:35px;
+	padding-left:8px;
+}
+
+.ReportList table tr.selected {
+	background-image:url(/static/images/theme/selected-name.png);
+	background-repeat:no-repeat;
+	color:white;
+}
+
+.ReportList table tr.hover {
+	background-image:url(/static/images/theme/hover-name.png);
+	background-repeat:no-repeat;
+}
+
+.ReportView {
+	padding-top: 5px;
+}
+.ReportView .content {
+	background-color: white;
+	width: 630px;
+	height: 400px;
+}
+
+.ReportView .daily, .monthly, .yearly {
+	float:left;
+	height: 90%;
+	width: 190px;
+	background-color: white;
+	padding-left: 10px;
+}
+
+.ReportView .title {
+	padding-bottom: 2px;
+}
+
+.ReportView .data {
+	height:100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+	
+.ReportView table {
+	width: 12em;
+}
+
+.ReportView .Table .rowHover {
+	background-color: #cce0fa;
+}
+
+.DayView, .MonthView, .UniversalView {
+	margin-left: 20px;
+    overflow-x: auto;
+}
+
+.DayView .title, .MonthView .title, .UniversalView .title {
+	font-weight: bold;
+	text-align: center;;
+	padding-top: 8px;
+	padding-bottom:8px;
+	font-size: large;
+	height: 40px;
+}
+
+.MonthView table, .DayView table, .UniversalView table {
+	width: 100%;
+}
+
+.MonthView table thead, .DayView table thead, .UniversalView table thead {
+	font-weight: bold;
+}
+
+.MonthView table tr, .DayView table tr, .UniversalView table tr {
+	height: 16px;
+}
+
+.UniversalView table td.green {
+	background:  url(/static/images/power_on.png) no-repeat;
+}	
+
+.UniversalView table td.red {
+	background:  url(/static/images/power_off.png) no-repeat;
+}	
+
+.UniversalView table td.yellow {
+	background:  url(/static/images/warning.png) no-repeat;
+}	
+
+.DayView .oddRow, .MonthView .oddRow, .UniversalView .oddRow {
+	background-color: #F6F6F6;	
+}
+

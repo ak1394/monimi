@@ -1,0 +1,31 @@
+[clickatell]
+user = 
+password = 
+api_id = 
+
+[webserver]
+loglevel = DEBUG
+secret = 
+re_captcha_key = 
+hub = hub@hub.monimi.net
+node_name = web@monimi.net
+erl_cookie = 
+
+[sqlalchemy]
+url = mysql://monimi:monimi@localhost/monimi
+pool_recycle = 3600
+echo = False
+encoding = utf-8
+convert_unicode = True
+
+[paypal]
+url = https://www.paypal.com/cgi-bin/webscr
+key = 
+cert = 
+cert_id = 
+paypal_cert = 
+business = 
+pdt_token = 
+
+[paypal-ipn]
+loglevel = DEBUG

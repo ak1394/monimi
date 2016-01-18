@@ -1,0 +1,282 @@
+@import url("/static/js/dojo/dojox/form/resources/BusyButton.css");
+
+html, body, #main {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+}
+
+.Home .left {
+	width: 190px;
+	height: 400px;
+	float: left;
+}
+
+.Home .right {
+    width: 650px;
+    height: 450px;
+	float: left;
+}
+
+
+.Home .MonitorList {
+	margin-top: 10px;
+	direction: rtl;
+	width: 190px;
+	height: 350px;
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+.Home .MonitorList table {
+	direction: ltr;
+	border-collapse: collapse;
+	width: 170px;
+}
+
+.Home .MonitorList table td {
+	height: 35px;
+	padding-left: 8px;
+}
+
+.Home .MonitorList table td {
+	width: 170px;
+	padding-top: 0px;
+}
+
+.Home .MonitorList table td div.name {
+	width: 130px;
+	float: left;
+	padding-top: 8px;
+}
+
+.Home .MonitorList table td div.status {
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.Home .MonitorList table td div.up {
+	background:  url(/static/images/up.png) no-repeat;
+}	
+
+.Home .MonitorList table td div.paused {
+	background: url(/static/images/paused.png) no-repeat;
+}
+
+.Home .MonitorList table td div.down {
+	background:  url(/static/images/down.png) no-repeat;
+}
+
+.Home .MonitorList table td div.unknown {
+	background:  url(/static/images/no-data.png) no-repeat;
+}
+
+.Home .addMonitorButton {
+	padding-left: 15px;
+}
+	
+.Home .addMonitorButton button {
+	width: 155px;
+}
+
+.MonitorList table tr.selected {
+	background-image: url(/static/images/theme/selected-name.png);
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.MonitorList table tr.hover {
+	background-image: url(/static/images/theme/hover-name.png);
+	background-repeat: no-repeat;
+}
+
+
+.MonitorView {
+	width: 100%;
+	height: 100%;
+}
+
+.MonitorView .tabContainer {
+    width: 630px;
+    height: 400px;
+}
+
+.MonitorView .tabContainer .dijitTabPane {
+    overflow: hidden;
+}
+
+.MonitorView .charts {
+	width: 600px;
+	height: 270px;
+}
+
+.MonitorView .stats  {
+	width: 100%;
+	padding-left: 45px;
+}
+
+.MonitorView .stats .name  {
+	width: 4em;
+}
+
+.MonitorView table.stats td {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.MonitorView .buttons {
+	padding: 5px;
+}
+
+
+
+.MonitorNotifications .qpButton button {
+	width: 12em;
+}
+
+.MonitorNotifications table thead tr td {
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.MonitorNotifications table tr td {
+	text-align: center;
+}
+
+.MonitorNotifications .buttons {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.MonitorNotifications .buttons button {
+	width: 10em;
+}
+
+.NotificationPanel {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.NotificationPanel .message {
+	padding-left: 10px;
+}
+
+.MonitorSettings {
+	padding: 4em;
+}
+
+.MonitorSettings table td {
+	padding: 5px;
+}
+
+.MonitorSettings .buttons {
+	padding-top: 40px;
+}
+
+.AddDialog .tabContainer {
+	width: 700px;
+	height: 300px;	
+}
+
+.AddDialog .input {
+	width: 500px;
+}
+
+
+.Registration {
+    overflow: auto;
+}
+
+.Registration .confirmation {
+	padding-top: 50px;
+}
+
+.Registration .confirmation .form {
+	padding-top: 20px;
+}
+
+.Registration .label {
+    float: left;
+    clear: both;
+    width: 150px;
+    margin-bottom: 4px;
+}
+
+.Registration .field {
+    float: left;
+    width: 250px;
+    margin-bottom: 4px;
+}
+
+.Plans table {
+	width: 90%;
+	border-top:1px solid #e5eff8;
+	border-right:1px solid #e5eff8;
+	margin:1em auto;
+	border-collapse:collapse;
+}
+
+.Plans td {
+	border-bottom: 1px solid #e5eff8;
+	border-left: 1px solid #e5eff8;
+	padding: .3em 1em;
+	text-align: center;
+}
+
+.Plans tr td {
+	background: white;
+}
+
+.Plans tr.oddRow td {
+	background:#f7fbff;
+}
+
+.Plans tr.oddRow .column1, .Plans .column1 {
+	background: white;
+	text-align: left;
+	width: 40%;
+}
+
+.centered-message {
+	text-align: center;
+	font-size: large;  
+}
+
+.validationError {
+    border: 2px solid #df6c42 !important;
+}
+
+.loading {
+	background: url(/static/images/indicator_medium.gif) no-repeat top center;
+}
+
+.border {
+    background-color: #d5e1fa;
+}
+
+.border-content {
+	padding-left: 10px;
+}
+
+.border-top {
+    background: url(/static/images/theme/corner-ul.png) no-repeat top left;
+}
+
+.border-top div {
+	width: 100%;
+	height: 10px;
+    background: transparent url(/static/images/theme/corner-ur.png) no-repeat top right;
+}
+
+.border-bottom {
+    background: url(/static/images/theme/corner-bl.png) no-repeat bottom left;
+}
+
+.border-bottom div {
+    background: transparent url(/static/images/theme/corner-br.png) no-repeat bottom right;
+	width: 100%;
+	height: 10px;
+}
+

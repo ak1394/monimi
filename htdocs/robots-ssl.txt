@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /register
+Allow: /sitemap.txt
+Disallow: /

@@ -1,0 +1,3 @@
+#!/bin/bash
+ACCOUNT=monimi
+exec setuidgid $ACCOUNT multilog ./main

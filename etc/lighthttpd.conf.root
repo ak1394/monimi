@@ -1,0 +1,22 @@
+server.port = 80
+server.username = "monimi"
+server.groupname = "monimi"
+server.bind = "209.20.70.11"
+
+$SERVER["socket"] == "0.0.0.0:443" {
+    ssl.engine = "enable"
+    ssl.pemfile = env.MONIMI_HOME + "/etc/ssl/server.pem"
+    ssl.ca-file = env.MONIMI_HOME + "/etc/ssl/gd_bundle.crt"
+    server.name = "monimi.net"
+
+    url.rewrite-once = (
+#        "^/$" => "/not-found",
+        "^/plans$" => "/not-found",
+        "^/contact$" => "/not-found",
+        "^/robots.txt$" => "/robots-ssl.txt",
+        "^/sitemap.txt$" => "/sitemap-ssl.txt",
+        "^/static/(.*)$" => "/static/$1",
+        "^/(.*)$" => "/server.py/$1",
+    ) 
+
+}

@@ -1,0 +1,20 @@
+<div class="MonitorRemove">
+  <div dojoType="dijit.layout.ContentPane">
+  	<div dojoAttachPoint="stackContainer" dojoType="dijit.layout.StackContainer">
+	  <div dojoType="dijit.layout.ContentPane">
+	    <div style="padding: 4em">
+		<div style="padding-bottom: 2em">You are about to remove this check, are you sure?</div>
+		<button dojoAttachPoint="removeButton" dojoType="dijit.form.Button">Remove Check</button>
+		</div>
+	  </div>
+	  <div dojoType="dijit.layout.ContentPane">
+	    <div style="padding: 4em">
+			<div style="padding-bottom: 2em">Are you sure?</div>
+			<button dojoType="dojox.form.BusyButton" dojoAttachPoint="confirmButton" busyLabel="Removing...">Yes</button>
+			<button dojoType="dijit.form.Button" dojoAttachPoint="cancelButton">Cancel</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+

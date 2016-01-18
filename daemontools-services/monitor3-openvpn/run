@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -z "$MONIMI_HOME" ]; then
+    export MONIMI_HOME=/home/monimi/monimi
+fi
+
+if [ -z "$HOME" ]; then
+    export HOME=$MONIMI_HOME
+fi
+
+cd $MONIMI_HOME/mm_monitor
+
+exec /opt/openvpn/sbin/openvpn --writepid /var/run/openvpn.pid --cd $MONIMI_HOME/etc/monitor3/openvpn --config $MONIMI_HOME/etc/monitor3/openvpn/client.conf

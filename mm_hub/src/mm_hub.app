@@ -1,0 +1,23 @@
+{application, mm_hub,
+ [{description, "mm_hub"},
+  {vsn, "0.01"},
+  {modules, [
+    mm_hub,
+    mm_hub_app,
+    mm_hub_sup,
+    mh_database,
+    mh_monitor_manager,
+    mh_check_manager,
+    mh_check_fsm,
+    mh_destination,
+    mh_notification_manager,
+    mh_notification_fsm,
+    mh_destination,
+    mh_email,
+    mh_sms,
+    mm_status
+  ]},
+  {registered, []},
+  {mod, {mm_hub_app, []}},
+  {env, []},
+  {applications, [kernel, stdlib, crypto]}]}.

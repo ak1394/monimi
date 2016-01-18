@@ -1,0 +1,35 @@
+<div class="HttpsCheck" style="padding: 10px">
+  <div dojoType="dijit.layout.ContentPane">
+	<div dojoType="dijit.form.Form" dojoAttachPoint="form">
+    <table>
+        <tr>
+                <td><label>HTTPS URL:</label></td>
+                <td><input class="input" dojoAttachPoint="checkUrl" dojoType="dijit.form.ValidationTextBox" required="true" maxLength="128" trim="true" type="text" value="https://"></td>
+        </tr>
+        <tr>
+                <td><label>Check Name:</label></td>
+                <td><input class="input" dojoAttachPoint="checkName" dojoType="dijit.form.ValidationTextBox" required="true" maxLength="18" trim="true" type="text"></td>
+        </tr>
+        <tr>
+                <td><label>Check every:</label></td>
+                <td><div dojoType="dojox.form.DropDownSelect" dojoAttachPoint="beatSelect"></div></td>
+        </tr>
+    </table>
+	</div>
+    <table style="margin-top: 100px">
+        <tr>
+            <td align="center">
+                <button dojoAttachPoint="okButton" dojoType="dijit.form.Button" disabled="true">
+                    OK
+                </button>
+            </td>
+            <td align="center">
+                <button dojoAttachPoint="cancelButton" dojoType="dijit.form.Button">
+                    Cancel
+                </button>
+            </td>
+        </tr>
+    </table>	
+  </div>
+</div>
+

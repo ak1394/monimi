@@ -1,0 +1,18 @@
+<div class="MonitorSettings">
+  <div dojoType="dijit.layout.ContentPane" dojoAttachPoint="contentPane">
+  	<table>
+    	<tr>
+        	<td>Name</td>
+            <td><input class="input" dojoAttachPoint="checkName" dojoType="dijit.form.ValidationTextBox" required="true" maxLength="18" trim="true" type="text"></td>
+		</tr>
+  		<tr>
+  			<td>Check every</td>
+			<td><select class="beat" dojoAttachPoint="beatSelect"></select></td>
+  		</tr>
+	</table>
+	<div class="buttons">
+    	<button dojoAttachPoint="applyButton" disabled="true" dojoType="dojox.form.BusyButton" busyLabel="Working...">Apply</button>
+	</div>
+  </div>
+</div>
+

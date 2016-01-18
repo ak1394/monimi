@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -z "$MONIMI_HOME" ]; then
+    export MONIMI_HOME=/home/monimi/monimi
+fi
+
+if [ -z "$HOME" ]; then
+    export HOME=$MONIMI_HOME
+fi
+
+COOKIE=abcd33cd
+NODENAME=console@hub.monimi.net
+
+cd $MONIMI_HOME/mm_hub
+
+exec /opt/erlang/bin/erl -pa $PWD/ebin $PWD/deps/*/ebin -name $NODENAME -setcookie $COOKIE -remsh hub@hub.monimi.net

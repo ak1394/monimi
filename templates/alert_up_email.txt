@@ -1,0 +1,5 @@
+Subject: Check '${umd.name}' is ok.
+From: monimi.net <monitor@monimi.net>
+To: ${umd.address}
+
+Check '${umd.name}' is ok.

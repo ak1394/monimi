@@ -1,0 +1,7 @@
+server.port = 80
+
+$SERVER["socket"] == "0.0.0.0:443" {
+    ssl.engine = "enable"
+    ssl.pemfile = env.MONIMI_HOME + "/etc/ssl/localhost.pem"
+    server.name = "localhost.monimi.net"
+}

@@ -1,0 +1,37 @@
+<div class="Personal">
+  <div class="tabContainer" dojoAttachPoint="tabContainer" dojoType="dijit.layout.TabContainer">
+  <div dojoType="dijit.layout.ContentPane" title="User">
+    <form dojoType="dijit.form.Form">
+	<table width="100%">
+		<tr><td width="20%">First Name:</td><td width="30%"><input tabindex="1" dojoAttachPoint="first_name" type="text" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+		<tr><td width="20%">Last Name:</td><td width="30%"><input tabindex="2" dojoAttachPoint="last_name" type="text" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+		<tr><td width="20%">Username:</td><td width="30%"><input tabindex="3" dojoAttachPoint="username" type="text" disabled="true" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+	</table>
+    	<button tabindex="4" dojoAttachPoint="userButton" dojoType="dojox.form.BusyButton" busyLabel="Working...">Update</button>
+	</form>
+  </div>
+  <div dojoType="dijit.layout.ContentPane" title="Password">
+    <form dojoType="dijit.form.Form">
+	<table width="100%">
+		<tr><td width="20%">Old Password:</td><td width="30%"><input class="field" tabindex="1" dojoAttachPoint="passwordOld"  maxLength="16" trim="true" required="true" type="password" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+		<tr><td width="20%">New Password:</td><td width="30%"><input class="field" tabindex="2" dojoAttachPoint="passwordNew"  maxLength="16" trim="true" required="true" type="password" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+		<tr><td width="20%">Confirm Password:</td><td width="30%"><input class="field" tabindex="3" dojoAttachPoint="passwordConfirm"  maxLength="16" trim="true" required="true" type="password" dojoType="dijit.form.ValidationTextBox"/></td></tr>
+	</table>
+    	<button tabindex="4" dojoAttachPoint="passwordButton" dojoType="dojox.form.BusyButton" busyLabel="Working...">Change Password</button>
+	</form>
+  </div>
+  <!--div dojoType="dijit.layout.ContentPane" title="Phone">
+	<table width="100%">
+		<tr><td width="20%">Mobile phone:</td><td width="30%"><input tabindex="1" dojoAttachPoint="mobile" type="text" dojoType="dijit.form.TextBox"/></td></tr>
+	</table>
+    	<button dojoAttachPoint="phoneButton" dojoType="dojox.form.BusyButton" busyLabel="Working...">Change Phone</button>
+	</form>
+  </div-->
+  <div dojoType="dijit.layout.ContentPane" title="Time Zone">
+	<table width="100%">
+		<tr><td width="20%">Time zone:</td><td width="30%"><div dojoType="monimi.TimezoneSelector" dojoAttachPoint="timeZone"></div></td></tr>
+	</table>
+    	<button dojoAttachPoint="zoneButton" dojoType="dojox.form.BusyButton" busyLabel="Working...">Change Time Zone</button>
+	</form>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="Subscription">
+	<div class="info">
+		<div class="plan">Your Package<div class="planName" dojoAttachPoint="currentPlanDiv"></div></div>
+		<div class="credits">SMS Credits<div class="creditsCount" dojoAttachPoint="smsCreditsDiv"></div></div>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<div class="buttons">
+		<div class="upgrade" dojoAttachPoint="upgradeDiv" style="display: none;">
+			<div class="upgradeText" style="text-align: center">Upgrade to</div>
+			<div dojoAttachPoint="subsButtonsDiv"></div>
+		</div>
+		<div class="sms">
+			<div class="smsText" style="text-align: center">Buy</div>
+			<div dojoAttachPoint="smsButtonsDiv"></div>
+		</div>
+		<div class="unsubscribe" dojoAttachPoint="cancelDiv" style="display: none;">
+	            <button dojoAttachPoint="unsubscribeButton" dojoType="dijit.form.Button">Cancel Subscription</button>
+		</div>
+		<div class="paypal">
+			<img src="/static/images/paypal_logo.png"/>
+		</div> 
+	</div>
+</div>

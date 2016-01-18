@@ -1,0 +1,23 @@
+{application, mm_monitor,
+ [{description, "mm_monitor"},
+  {vsn, "0.01"},
+  {modules, [
+    mm_monitor,
+    mm_monitor_app,
+    mm_monitor_sup,
+    mm_results,
+    mm_scheduler,
+    mm_runner,
+    mm_http,
+    mm_ping,
+    mm_ssh,
+    mm_ssh_parse,
+    mm_probe_http,
+    mm_probe_https,
+    mm_probe_ping,
+    mm_probe_ssh
+  ]},
+  {registered, []},
+  {mod, {mm_monitor_app, []}},
+  {env, []},
+  {applications, [kernel, stdlib, ssl]}]}.

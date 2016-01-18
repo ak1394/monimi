@@ -1,0 +1,34 @@
+.dj_ie6 .Home .MonitorList table td div.up {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/up.png', sizingMethod='crop');
+	background-image: none;
+}
+
+.dj_ie6 .Home .MonitorList table td div.paused {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/paused.png', sizingMethod='crop');
+	background-image: none;
+}
+
+.dj_ie6 .Home .MonitorList table td div.down {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/down.png', sizingMethod='crop');
+	background-image: none;
+}
+
+.dj_ie6 .Home .MonitorList table td div.unknown {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/no-data.png', sizingMethod='crop');
+	background-image: none;
+}
+
+.dj_ie6 .DayView table td.green {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/power_on.png', sizingMethod='crop');
+	background-image: none;
+}	
+
+.dj_ie6 .DayView table td.red {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/power_off.png', sizingMethod='crop');
+	background-image: none;
+}	
+
+.dj_ie6 .DayView table td.yellow {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/warning.png', sizingMethod='crop');
+	background-image: none;
+}

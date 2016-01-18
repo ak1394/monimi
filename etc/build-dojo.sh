@@ -1,0 +1,1 @@
+java -Xmx64m -jar ../shrinksafe/custom_rhino.jar build.js profileFile=$MONIMI_HOME/etc/dojo-build.profile.js action=release copyTests=false optimize=shrinksafe cssOptimize=comments cssImportIgnore=../dijit.css releaseDir=../../../ releaseName=dojo-custom

@@ -1,0 +1,28 @@
+<div>
+<table>
+<tr>
+</tr>
+<tr><td colspan="4">&nbsp;</td></tr>
+<tr>
+<td>From</td>
+<td>
+	<input type="text" dojoAttachPoint="timeStart"
+                dojoType="dijit.form.TimeTextBox"
+				constraints="{clickableIncrement:'T01:00:00'}"
+                required="true" />
+</td>				
+<td>To</td>
+<td>
+	<input type="text" dojoAttachPoint="timeEnd"
+                dojoType="dijit.form.TimeTextBox"
+				constraints="{clickableIncrement:'T01:00:00'}"
+                required="true" />
+</td>
+</tr>
+<tr><td colspan="4">&nbsp;</td></tr>
+<tr>
+</table>
+	<button dojoAttachPoint="buttonOk" dojoType="dijit.form.Button">OK</button>
+	<button dojoAttachPoint="buttonCancel" dojoType="dijit.form.Button">Cancel</button>
+	<button dojoAttachPoint="buttonDisable" dojoType="dijit.form.Button">Disable Quiet Period</button>
+</div>

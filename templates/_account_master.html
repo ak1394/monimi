@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude" 
+      py:strip="True">	
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>monimi.net - website monitoring service, free sms alerts</title>
+<link rel="stylesheet" type="text/css" href="/static/js/dojo/dojo/resources/dojo.css"/>
+<link rel="stylesheet" type="text/css" href="/static/js/dojo/dijit/themes/tundra/tundra.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/monimi.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
+<link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+</head>
+<body class="tundra">
+
+<?python
+if value_of('ads'):
+  ads_class = {'class':'ads-present'}
+else:
+  ads_class = {'class':'ads-absent'}
+?>
+
+<div id="wrapper" py:attrs="ads_class">
+	
+<div id="wrapper-left" py:attrs="ads_class">
+	<div py:if="ads" id="ads-vertical">
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-0246074745442454";
+	/* 120x600, monimi.net */
+	google_ad_slot = "9793723981";
+	google_ad_width = 120;
+	google_ad_height = 600;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>
+	</div>
+</div>
+
+<div id="wrapper-right">
+	<div id="header">
+		<div id="logo">
+			<a href="http://${server_name}/">monimi.net</a>
+		</div>
+		<div id="menu-container">
+			<div id="menu-top">
+				<a href="http://${server_name}/">&laquo; to Welcome page</a>
+			</div>
+			<div id="menu">
+				<div class="menu-contents"/>
+			</div>
+		</div>
+	</div>
+
+	<div py:if="ads">
+		<div id="ads-horizontal">
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-0246074745442454";
+		/* 728x15, monimi.net */
+		google_ad_slot = "7090328362";
+		google_ad_width = 728;
+		google_ad_height = 15;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>
+		</div>
+	</div>
+
+	<div id="content">
+		<div class="body-contents"/>
+	</div>
+
+</div>
+
+</div>
+</body>
+</html>

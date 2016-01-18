@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+	  
+<head py:match="head">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>monimi.net - register new account</title>
+	<script type="text/javascript" src="https://api-secure.recaptcha.net/js/recaptcha_ajax.js"></script>
+	<script type="text/javascript" src="/static/js/dojo/dojo/dojo.js" djConfig="parseOnLoad:true"></script>
+	<script type="text/javascript" src="/static/js/dojo/dojo/monimi-registration.js"></script>
+	<script type="text/javascript">
+		dojo.registerModulePath("monimi", "/static/js/monimi");
+		dojo.require("dojo.parser");
+		dojo.require("monimi.Registration");
+		dojo.require("monimi.JsonService");
+		monimiRPC = new monimi.JsonService(window.location.protocol + "//" + window.location.host + "/controllers/smd");
+	</script>
+	<link rel="stylesheet" type="text/css" href="/static/js/dojo/dojo/resources/dojo.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/js/dojo/dijit/themes/tundra/tundra.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/monimi.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+</head>
+	  
+<py:match path="body" once="true">
+  <body py:attrs="select('@*')">
+    ${select("*|text()")}
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-5706209-1");
+	pageTracker._initData();
+	pageTracker._trackPageview();
+	</script>
+  </body>
+</py:match>
+	  
+<div py:match="//div[@class='menu-contents']">
+	<ul>
+		<li><a href="http://${server_name}/" title="">Welcome</a></li>
+		<li><a href="http://${server_name}/plans" title="">Plans</a></li>
+		<li><a href="http://${server_name}/contact" title="">Contact</a></li>
+		<li class="active"><a href="#" title="">Register</a></li>
+	</ul>
+</div>
+	  
+<div py:match="//div[@class='body-contents']">
+	<div id="main-only">
+		<div class="boxed">
+			<div class="title">
+				<h2>Register</h2><div class="corner_right"></div>
+				<div style="clear: both; height:0px;">&nbsp;</div>
+			</div>
+			<div class="content">
+				<div dojoType="monimi.Registration"></div>
+			</div>
+		</div>
+		<div style="clear: both; height:0px;">&nbsp;</div>
+	</div>
+</div>
+
+<xi:include href="_master.html"/>
+
+</html>

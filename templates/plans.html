@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title py:match="title">monimi.net - plans and prices</title>
+	  
+<div py:match="//div[@class='menu-contents']">
+	<ul>
+		<li><a href="/" title="">Welcome</a></li>
+		<li class="active"><a href="#" title="">Plans</a></li>
+		<li><a href="/contact" title="">Contact</a></li>
+		<li><a href="https://${server_name}/register" title="">Register</a></li>
+	</ul>
+</div>
+	  
+<div py:match="//div[@class='body-contents']">
+	<div id="main-only">
+		<div class="boxed">
+			<div class="title">
+				<h2>Plans and Prices</h2><div class="corner_right"></div>
+				<div style="clear: both; height:0px;">&nbsp;</div>
+			</div>
+			<div class="content Plans">
+            <table>
+            <tr><td class="column1">&nbsp;</td><td><b>Free</b></td><td><b>Basic</b></td><td><b>Pro</b></td></tr>
+            <tr class="oddRow"><td class="column1">HTTP Checks</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr><td class="column1">HTTPS Checks</td><td>&nbsp;</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr class="oddRow"><td class="column1">Ping Checks</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr><td class="column1">E-Mail Notifications</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr class="oddRow"><td class="column1">SMS Notifications</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr><td class="column1">Ad Free</td><td>&nbsp;</td><td><img src="/static/images/yes.png"/></td><td><img src="/static/images/yes.png"/></td></tr>
+            <tr class="oddRow"><td class="column1">Number of Checks <a href="#checks"><sup>1</sup></a></td><td>3</td><td>5</td><td>15</td></tr>
+            <tr><td class="column1">Free SMS messages (per month)</td><td>5</td><td>15</td><td>30</td></tr>
+            <tr class="oddRow"><td class="column1">Monitoring interval (minutes)</td><td>20 - 60</td><td>5 - 60</td><td>1 - 60</td></tr>
+            <tr><td class="column1">Price (per month)</td><td>FREE</td><td>$4.99</td><td>$14.50</td></tr>
+            </table>
+			</div>
+            <div>
+            <p><b>Number of Checks</b><a name="checks"><sup>1</sup></a>: defines how many target URLs per account can be monitored. For example you can monitor a front page and a forum page on one site, and a front page on a different site. That will make up three checks.</p>
+            </div>
+		</div>
+		<div style="clear: both; height:0px;">&nbsp;</div>
+	</div>
+</div>
+
+<xi:include href="_master.html"/>
+
+</html>

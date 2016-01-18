@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude" 
+      py:strip="True">	
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>monimi.net - website monitoring service, free sms alerts</title>
+<link rel="stylesheet" type="text/css" href="/static/js/dojo/dojo/resources/dojo.css"/>
+<link rel="stylesheet" type="text/css" href="/static/js/dojo/dijit/themes/tundra/tundra.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/monimi.css"/>
+<link rel="stylesheet" type="text/css" href="/static/css/theme.css"/>
+<link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+</head>
+<body class="tundra">
+
+<div id="wrapper" class="ads-absent">
+	
+<div id="wrapper-left" class="ads-absent">
+</div>
+
+<div id="wrapper-right">
+	
+	<div id="header">
+		<div id="logo">
+			<a href="http://${server_name}/">monimi.net</a>
+		</div>
+		<div id="menu-container">
+			<div id="menu-top">
+				<a py:if="logged_in" href="http://${server_name}/home">&laquo; to Your Account</a>
+			</div>
+			<div id="menu">
+				<div class="menu-contents"/>
+			</div>
+		</div>
+	</div>
+	
+	<div id="content">
+		<div class="body-contents"/>
+	</div>
+	
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+#!/bin/bash
+if [ -z "$MONIMI_HOME" ]; then
+    export MONIMI_HOME=/home/monimi/monimi
+fi
+
+if [ -z "$LIGHTTPD" ]; then
+    LIGHTTPD=/opt/lighttpd
+fi
+
+ERLANG=/opt/erlang
+
+PATH=${PATH}:/opt/python/bin
+
+## ABSOLUTE path to the spawn-fcgi binary
+SPAWNFCGI="$LIGHTTPD/bin/spawn-fcgi"
+
+## ABSOLUTE path to the PHP binary
+FCGIPROGRAM="$MONIMI_HOME/run-webserver.py"
+
+## TCP port to which to bind on localhost
+FCGIPORT="1026"
+
+# allowed environment variables, separated by spaces
+ALLOWED_ENV="PATH MONIMI_HOME"
+
+## if this script is run as root, switch to the following user
+USERID=monimi
+GROUPID=monimi
+
+## bind to address
+BIND_ADDR=127.0.0.1
+
+################## no config below this line
+
+export PATH MONIMI_HOME
+
+ALLOWED_ENV="$ALLOWED_ENV"
+
+if test x$UID = x0; then
+  EX="$SPAWNFCGI -p $FCGIPORT -f $FCGIPROGRAM -u $USERID -g $GROUPID -a $BIND_ADDR -n"
+else
+  EX="$SPAWNFCGI -p $FCGIPORT -f $FCGIPROGRAM -a $BIND_ADDR -n"
+fi
+
+# copy the allowed environment variables
+E=
+
+for i in $ALLOWED_ENV; do
+  E="$E $i=${!i}"
+done
+
+cd $MONIMI_HOME
+
+# clean the environment and set up a new one
+echo "Starting epmd..."
+$ERLANG/bin/epmd -daemon
+echo "Starting webserver..."
+exec env - $E $EX 2>&1

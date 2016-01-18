@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<title py:match="title">monimi.net - support</title>
+	  
+<div py:match="//div[@class='menu-contents']">
+	<ul>
+		<li><a href="/home">Checks</a></li>
+		<li><a href="/reports">Reports</a></li>
+		<li><a href="/profile">Profile</a></li>
+		<li class="active"><a href="">Support</a></li>
+		<li><a href="/signout">Logout</a></li>
+	</ul>
+</div>
+
+<div py:match="//div[@class='body-contents']">
+	<div id="main-only">
+		<div class="boxed">
+			<div class="title">
+				<h2>Please set username</h2><div class="corner_right"></div>
+				<div style="clear: both; height:0px;">&nbsp;</div>
+			</div>
+			<div class="content">
+				Before proceeding to the forum please go to <a href="/profile">Profile</a> and and choose
+				your username.
+			</div>
+		</div>
+		<div style="clear: both; height:0px;">&nbsp;</div>
+	</div>
+</div>
+
+<xi:include href="_account_master.html"/>
+
+</html>

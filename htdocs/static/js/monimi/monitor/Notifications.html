@@ -1,0 +1,32 @@
+<div class="MonitorNotifications">
+  <div dojoType="dijit.layout.ContentPane" dojoAttachPoint="contentPane">
+  <table width="100%">
+  <thead>
+  <tr><td></td><td>Notify when down</td><td> Notify when back up</td><td>Quiet period</td></tr>
+  </thead>
+  <tbody dojoAttachPoint="tbody">
+  <!--{% for notification in notifications %}-->
+  <tr>
+  	<td class="notificationName">{{notification.name}}</td>
+  	<td>
+		<select class="notificationDown" id="notify_down_{{forloop.counter0}}">
+		<option value="ON_NEVER" {% ifequal notification.notify_down_on "ON_NEVER"%} selected="selected"{% endifequal %}>Never</option>
+		<option value="ON_FIRST_FAULT" {% ifequal notification.notify_down_on "ON_FIRST_FAULT"%} selected="selected"{% endifequal %}>On First Failure</option>
+		<option value="ON_SECOND_FAULT" {% ifequal notification.notify_down_on "ON_SECOND_FAULT"%} selected="selected"{% endifequal %}>On Second Failure</option>
+		<option value="ON_THIRD_FAULT" {% ifequal notification.notify_down_on "ON_THIRD_FAULT"%} selected="selected"{% endifequal %}>On Third Failure</option>						
+		</select>
+  	</td>
+  	<td><input type="checkbox" class="notificationUp" dojoType="dijit.form.CheckBox" id="notify_up_{{forloop.counter0}}" {%if notification.notify_up %}checked="checked"{% endif %}></input></td>
+  	<td class="qpButton"><button dojoType="dijit.form.Button" id="button_change_qp_{{forloop.counter0}}">
+	       {{notification.display_period}}
+	     </button>
+	</td>
+  </tr>	  
+  <!--{% endfor %}-->
+  </tbody>	  
+  </table>
+  <div class="buttons">
+    <button dojoAttachPoint="applyButton" dojoType="dojox.form.BusyButton" busyLabel="Working..." disabled="true">Apply</button>
+  </div>
+  </div>
+</div>

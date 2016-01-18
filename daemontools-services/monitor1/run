@@ -1,0 +1,21 @@
+#!/bin/bash
+if [ -z "$MONIMI_HOME" ]; then
+    export MONIMI_HOME=/home/monimi/monimi
+fi
+
+if [ -z "$HOME" ]; then
+    export HOME=$MONIMI_HOME
+fi
+
+COOKIE=abcd33cd
+NODENAME=monitor@monitor1.monimi.net
+APPNAME=mm_monitor
+ACCOUNT=monimi
+
+cd $MONIMI_HOME/mm_monitor
+
+if test x$UID = x0; then
+  exec setuidgid $ACCOUNT /opt/erlang/bin/erl -pa $PWD/ebin $PWD/deps/*/ebin -boot start_sasl -s $APPNAME -name $NODENAME -setcookie $COOKIE -noinput 2>&1
+else
+  exec /opt/erlang/bin/erl -pa $PWD/ebin $PWD/deps/*/ebin -boot start_sasl -s $APPNAME -name $NODENAME -setcookie $COOKIE -noinput 2>&1
+fi

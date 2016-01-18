@@ -1,0 +1,43 @@
+<div class="Registration">
+  <div class="form" dojoAttachPoint="registrationDiv" style="display:hidden;">
+    <div style="float:left; width:450px;">
+    <div class="label">Email:</div><input class="field" tabindex="1" dojoAttachPoint="formEmail"  maxLength="64" trim="true" required="true" type="text" dojoType="dijit.form.ValidationTextBox"/>
+    <div class="label">Password:</div><input class="field" tabindex="2" dojoAttachPoint="formPassword"  maxLength="16" trim="true" required="true" type="password" dojoType="dijit.form.ValidationTextBox"/>
+    <div class="label">Confirm:</div><input class="field" tabindex="3" dojoAttachPoint="formPasswordConfirm"  maxLength="16" trim="true" required="true" type="password" dojoType="dijit.form.ValidationTextBox"/>
+    <div class="label">Mobile<sup>*</sup>:</div>
+    <div class="field">
+        <input class="field" tabindex="4" dojoAttachPoint="formMobile" type="text" required="true" trim="true" maxLength="24" regExp="[\d\-\+ ]+" dojoType="dijit.form.ValidationTextBox"/>
+        Enter in international format, e.g. +123&nbsp;45&nbsp;678-9000
+    </div>
+    <button class="field" tabindex="6" dojoAttachPoint="registerButton" busyLabel="Sending..." dojoType="dojox.form.BusyButton">Submit</button>
+    </div>
+    <div style="width: 300px; height: 150px; display:block; float:left;" dojoAttachPoint="recaptchaDiv" id="recaptcha_div">reCAPTCHA loading...</div>
+	<p style="clear: both; padding-top: 12px"><sup>*</sup>Mobile phone number required for SMS alerts, also the account activation code will be sent to that number.</p>
+    <p><a class="field" href="#" dojoAttachPoint="alreadyGot">Already got registration code?</a></p>
+  </div>
+  <div dojoAttachPoint="verifyDiv" class="verify" style="display: none">
+    <div style="padding-bottom:8px">Please confirm the following information:</div>
+    <div class="form">
+      <div class="label">Your time zone is:</div>
+      <div class="field" dojoType="monimi.TimezoneSelector" dojoAttachPoint="timeZone"></div>
+	  <div style="clear:both"> 
+      	<button dojoAttachPoint="verifyButton" dojoType="dijit.form.Button">Confirm</button>
+	  </div>
+    </div>	
+  </div>
+  <div dojoAttachPoint="confirmationDiv" class="confirmation" style="display: none">
+    <div>We've sent you a confirmation code to your mobile number.</div>
+	
+	<div dojoAttachPoint="smsStatusDiv" style="display:none; padding-top: 16px; padding-bottom: 16px;">
+	The delivery status of your message is: <span style="font-weight: bold;" dojoAttachPoint="smsStatusSpan">Unknown</span>
+	<a href="#" dojoAttachPoint="smsStatusRefreshHref"><img dojoAttachPoint="smsRefreshImg" src="/static/images/refresh.png"></img></a>
+	</div>
+	
+	<div>Please enter the code to activate your account.</div>
+    <div class="form">
+      <input dojoAttachPoint="formCode" trim="true" required="true" maxLength="16" dojoType="dijit.form.ValidationTextBox"/>
+      <br/>
+      <button dojoAttachPoint="activateButton" busyLabel="Sending..." dojoType="dojox.form.BusyButton">Submit</button>
+    </div>	
+  </div>
+</div>

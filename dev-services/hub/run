@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ -z "$MONIMI_HOME" ]; then
+    export MONIMI_HOME=/home/monimi/monimi
+fi
+
+if [ -z "$HOME" ]; then
+    export HOME=$MONIMI_HOME
+fi
+
+COOKIE=abcd33cd-dev
+NODENAME=hub@localhost.monimi.net
+APPNAME=mm_hub
+ACCOUNT=monimi
+
+cd $MONIMI_HOME/mm_hub
+
+exec /opt/erlang/bin/erl -pa $PWD/ebin $PWD/deps/*/ebin -boot start_sasl -s $APPNAME -name $NODENAME -setcookie $COOKIE -config hub-dev

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+	  
+<div py:match="//div[@class='menu-contents']">
+	<ul>
+		<li><a href="/" title="">Welcome</a></li>
+	</ul>
+</div>
+	  
+<div py:match="//div[@class='body-contents']">
+	<div id="main-only">
+		<div class="boxed">
+			<div class="title">
+				<h2>Subscription changed</h2><div class="corner_right"></div>
+				<div style="clear: both; height:0px;">&nbsp;</div>
+			</div>
+			<div class="content">
+			<p>Your subscription has been changed.</p> 
+			<p>Please note that new subcription plan will be applied at the start of the next billing period</p> 
+			<p>If your require a new subscription level immediately, please cancel your current subscription and sign
+			up for a new one.</p> 
+			</div>
+		</div>
+		<div style="clear: both; height:0px; padding-bottom: 200px;">&nbsp;</div>
+	</div>
+</div>
+
+<xi:include href="_master.html"/>
+</html>

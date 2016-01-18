@@ -1,0 +1,127 @@
+.Profile {
+    width: 850px;
+	height:460px;
+}
+
+.Profile .left {
+	float:left;
+	width:600px;
+	height:460px;
+	padding-left: 10px;
+}
+
+.Profile .right {
+	float:left;
+	width:200px;
+	height:460px;
+}
+
+.Profile .border {
+    background-color: #d5e1fa;
+}
+
+.Profile .border-content {
+	padding-left: 10px;
+}
+
+.Profile .border-top {
+    background: url(/static/images/theme/corner-ul.png) no-repeat top left;
+}
+
+.Profile .border-top div {
+	width: 100%;
+	height: 10px;
+    background: transparent url(/static/images/theme/corner-ur.png) no-repeat top right;
+}
+
+.Profile .border-bottom {
+    background: url(/static/images/theme/corner-bl.png) no-repeat bottom left;
+}
+
+.Profile .border-bottom div {
+    background: transparent url(/static/images/theme/corner-br.png) no-repeat bottom right;
+	width: 100%;
+	height: 10px;
+}
+
+.Profile .Subscription {
+	background-color: white;
+	width: 180px;
+	height: 400px;
+
+}
+
+.Profile .Subscription .buttons button {
+	width: 160px;
+	margin-left: 8px;
+}
+
+
+.Personal .tabContainer {
+    width: 590px;
+	height: 420px;
+}
+
+.Subscription .info {
+	width: 180px;
+	height: 40px;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.Subscription .plan {
+	float:left;
+ 	text-align: center;
+	font-variant: small-caps;
+	width:100px;
+	height:40px;
+}
+
+.Subscription .credits {
+	float:left;
+	width:80px;
+	height:40px;
+ 	text-align: center;
+	font-variant: small-caps;
+}
+
+.Subscription .creditsCount {
+	padding-top: 4px;
+	height: 100%;
+	width: 100%;
+ 	text-align: center;
+	font-size: 20px;
+}
+
+.Subscription .planName {
+	padding-top: 4px;
+	height: 100%;
+	width: 100%;
+ 	text-align: center;
+	font-size: 20px;
+	font-variant: small-caps;
+	text-transform: uppercase
+}
+
+.Subscription .unsubscribe {
+	padding-top: 16px;
+}
+
+.Subscription .paypal {
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.Subscription .upgradeText {
+	font-variant: small-caps;
+	padding-top: 6px;
+	padding-bottom: 4px;
+}
+
+.Subscription .smsText {
+	font-variant: small-caps;
+	padding-bottom: 4px;
+	padding-top: 12px;	
+}
+
+
